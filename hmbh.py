@@ -733,12 +733,12 @@ def plot_shap_violin(shap_values: List, data: Union[pd.DataFrame, npt.NDArray], 
 
             ax0 = fig.add_subplot(211)
             ax0.set_title('Class 0 - No Evol')
-            shap.summary_plot(shap_values[0], data, plot_type='violin', show=False)
+            shap.summary_plot(shap_values[0], data, plot_type='violin', feature_names=X.columns, show=False)
             ax0.set_xlabel('SHAP values (impact on output model)', fontsize=11)
 
             ax1 = fig.add_subplot(212)
             ax1.set_title('Class 1 - Evol')
-            shap.summary_plot(shap_values[1], data, plot_type='violin', show=False)
+            shap.summary_plot(shap_values[1], data, plot_type='violin', feature_names=X.columns, show=False)
             ax1.set_xlabel('SHAP values (impact on output model)', fontsize=11)
 
             plt.subplots_adjust(hspace = 50)
@@ -751,17 +751,17 @@ def plot_shap_violin(shap_values: List, data: Union[pd.DataFrame, npt.NDArray], 
 
             ax0 = fig.add_subplot(311)
             ax0.set_title('Class 0 - GC')
-            shap.summary_plot(shap_values[0], data, plot_type='violin', show=False)
+            shap.summary_plot(shap_values[0], data, plot_type='violin', feature_names=X.columns, show=False)
             ax0.set_xlabel('SHAP values (impact on output model)', fontsize=11)
 
             ax1 = fig.add_subplot(312)
             ax1.set_title('Class 1 - YSC')
-            shap.summary_plot(shap_values[1], data, plot_type='violin', show=False)
+            shap.summary_plot(shap_values[1], data, plot_type='violin', feature_names=X.columns, show=False)
             ax1.set_xlabel('SHAP values (impact on output model)', fontsize=11)
 
             ax2 = fig.add_subplot(313)
             plt.title('Class 2 - NSC')
-            shap.summary_plot(shap_values[2], data, plot_type='violin', show=False)
+            shap.summary_plot(shap_values[2], data, plot_type='violin', feature_names=X.columns, show=False)
             plt.xlabel('SHAP values (impact on output model)', fontsize=11)
 
             plt.subplots_adjust(hspace = 50)
