@@ -785,7 +785,7 @@ def plot_shap_violin(shap_values: List, data: Union[pd.DataFrame, npt.NDArray], 
             ax1.set_xlabel('SHAP values (impact on output model)', fontsize=11)
 
             plt.subplots_adjust(hspace = 50)
-            plt.gcf().set_size_inches(8,12)
+            plt.gcf().set_size_inches(8,10)
             plt.tight_layout()
             plt.show()
 
