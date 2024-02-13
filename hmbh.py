@@ -637,7 +637,7 @@ def plot_learning_curve(model: Union[RandomForestClassifier, XGBClassifier], X_t
     plt.figure()
     
     train_sizes, train_scores, test_scores = learning_curve(
-        model, X_train, y_train, cv=cv, n_jobs=n_jobs, train_sizes=train_sizes)
+        model, X_train, y_train, cv=cv, n_jobs=n_jobs, train_sizes=train_sizes, shuffle=True)
     
     train_scores_mean = np.mean(train_scores, axis=1)
     train_scores_std = np.std(train_scores, axis=1)
