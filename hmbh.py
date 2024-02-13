@@ -848,7 +848,7 @@ def plot_shap_bar(shap_values: List, X: pd.DataFrame) -> None:
         shap.summary_plot(shap_values, plot_type='bar', feature_names=X.columns, plot_size=(8,5), show=False, class_names=class_names)
 
         # Single class bar plot
-        fig, ax = plt.subplots(1, 3, figsize=(26,10))
+        fig, ax = plt.subplots(1, 2, figsize=(26,10))
         for i in range(a):
             shap_df1 = shap_df.iloc[i,:].sort_values()
             ax[i].barh(shap_df1.index, shap_df1, color='tab:blue')
