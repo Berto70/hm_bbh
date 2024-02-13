@@ -386,7 +386,7 @@ def model_evaluation(model: Union[RandomForestClassifier, XGBClassifier], X: pd.
         plt.show()
 
 
-def gridsearch_RF(param_grid: dict, cv: int, X_train: npt.NDArray, y_train: npt.NDArray, X_test: npt.NDArray, n_jobs: int, random_state: int=42, verbose: int=2) -> Tuple[RandomForestClassifier, npt.NDArray, dict]:
+def gridsearch_RF(param_grid: dict, cv: int, X_train: npt.NDArray, y_train: npt.NDArray, X_test: npt.NDArray, n_jobs: int, random_state: int=42, verbose: int=1) -> Tuple[RandomForestClassifier, npt.NDArray, dict]:
 
     """
     Function that takes in input the parameter grid and the preprocessed data and returns the best model and the predictions.
@@ -538,7 +538,7 @@ def simple_XGB(X_train: np.ndarray, y_train: np.ndarray, X_test: np.ndarray, n_j
     return XGB, y_pred
 
 
-def gridsearch_XGB(param_grid: dict, cv: int, X_train: np.ndarray, y_train: np.ndarray, X_test: np.ndarray, n_jobs: int, random_state: int = 42, verbose: int = 2) -> Tuple[XGBClassifier, np.ndarray, dict]:
+def gridsearch_XGB(param_grid: dict, cv: int, X_train: np.ndarray, y_train: np.ndarray, X_test: np.ndarray, n_jobs: int, random_state: int=42, verbose: int=1) -> Tuple[XGBClassifier, np.ndarray, dict]:
     
     """
     Function that takes in input the parameter grid and the preprocessed data and returns the best model and the predictions.
