@@ -714,7 +714,7 @@ def plot_ROC(model: Union[RandomForestClassifier, XGBClassifier], X_test: npt.ND
         plt.ylim([0.0, 1.05])
         plt.xlabel('False Positive Rate')
         plt.ylabel('True Positive Rate')
-        plt.title('ROC Curve for Multi-class (Test Set)')
+        plt.title('ROC Curve for Multi-class (Test Set)\n' + title)
         plt.legend(loc='lower right')
         plt.show()
 
